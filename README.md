@@ -16,7 +16,20 @@ A PyTorch implementation of hierarchical graph neural networks for whole slide i
 
 ## Installation
 
-```bash
+bash
 git clone https://github.com/ImamDad/WSI_Graph_Classification.git
 cd WSI_Graph_Classification
 pip install -r requirements.txt
+
+
+# Training
+python main.py --mode train
+
+# Evaluation
+python main.py --mode evaluate --model-path saved_models/best_model.pth
+
+# Explainability
+python main.py --mode explain --model-path saved_models/best_model.pth
+
+# External validation
+python main.py --mode validate --model-path saved_models/best_model.pth
